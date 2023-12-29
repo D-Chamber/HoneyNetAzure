@@ -43,6 +43,8 @@
 3. We then set the collection path to the Windows vm’s location where we stored the log file.
 4. We can check this by querying the custom log that we made and piping it and parsing the raw data to separate the labels/categories.
 
+![Honeypot Custome Log](https://github.com/D-Chamber/HoneyNetAzure/blob/main/CustomLog.png)
+
 ### Sentinel Workbook
 ---
 1. In Sentinel we want to create a new workbook. In this workbook we want to create our own widget setup.
