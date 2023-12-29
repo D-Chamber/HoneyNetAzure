@@ -3,25 +3,25 @@
 ### Setting up the Environment
 ---
 1. Setup Virtual Machine:
-  a. This virtual machine will be used to create a honeypot. 
-  b. We are utilizing the free version included with Azure for Windows 10 2h22 gen2
-  c. We created a new virtual machine with a new resource group we called “HoneypotLabs”.
-  d. We create a new network security group by deleting the default and set the inbound traffic to allow from any source and destination all the port ranges and protocol. We called the rule “Any_In”.
-  e. We finally click review + create to finish up the creation of the virtual machine.
-2. Setup Log Analytics Workspace:
-  a. Create this to query to ingest logs from the Windows Virtual Machine using the Windows Event Logs.
-  b. Create our own custom log that contains geographic analytics.
-  c. SIEM (Azure Sentinel) will be used to connect to the workspace to display the log geodata.
-  d. To start we will create a LAW (log analytic workspace) we connected to our resource group that we created during the Virtual Machine setup.
-  e. We then name the instance of the LAW (e.g law-honeypot1) and select the region for the instance (East US 2). (Proceed to step 3a)
-  f. We then go back to Log Analytics Workspace to connect it to the virtual machine that we created earlier.
-3. Setup Microsoft Defender for Cloud:
-  a. Used to enable the ability to gather logs from the VM into the LAW.
-  b. We go into the settings for Defender Plans for the resource group and enable Microsoft Defender, We enable everything except SQL server on machines.
-  c. Then we set the Data Collection setting to “All Events”. (Proceed to step 2f)
-4. Setup Azure Sentinel:
-  a. This is our SIEM that is gonna ingest our logs.
-  b. We just have to connect it to our Log Analytic Workspace.
+  - This virtual machine will be used to create a honeypot.
+  - We are utilizing the free version included with Azure for Windows 10 2h22 gen2
+  - We created a new virtual machine with a new resource group we called “HoneypotLabs”.
+  - We create a new network security group by deleting the default and set the inbound traffic to allow from any source and destination all the port ranges and protocol. We called the rule “Any_In”.
+  - We finally click review + create to finish up the creation of the virtual machine.
+3. Setup Log Analytics Workspace:
+  - Create this to query to ingest logs from the Windows Virtual Machine using the Windows Event Logs.
+  - Create our own custom log that contains geographic analytics.
+  - SIEM (Azure Sentinel) will be used to connect to the workspace to display the log geodata.
+  - To start we will create a LAW (log analytic workspace) we connected to our resource group that we created during the Virtual Machine setup.
+  - We then name the instance of the LAW (e.g law-honeypot1) and select the region for the instance (East US 2). (Proceed to step 3a)
+  - We then go back to Log Analytics Workspace to connect it to the virtual machine that we created earlier.
+4. Setup Microsoft Defender for Cloud:
+  - Used to enable the ability to gather logs from the VM into the LAW.
+  - We go into the settings for Defender Plans for the resource group and enable Microsoft Defender, We enable everything except SQL server on machines.
+  - Then we set the Data Collection setting to “All Events”. (Proceed to step 2f)
+5. Setup Azure Sentinel:
+  - This is our SIEM that is gonna ingest our logs.
+  - We just have to connect it to our Log Analytic Workspace.
 
 ### Remote Desktop into Virtual Machine
 ---
