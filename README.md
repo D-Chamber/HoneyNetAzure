@@ -13,12 +13,12 @@
   - Create our own custom log that contains geographic analytics.
   - SIEM (Azure Sentinel) will be used to connect to the workspace to display the log geodata.
   - To start we will create a LAW (log analytic workspace) we connected to our resource group that we created during the Virtual Machine setup.
-  - We then name the instance of the LAW (e.g law-honeypot1) and select the region for the instance (East US 2). (Proceed to step 3a)
+  - We then name the instance of the LAW (e.g law-honeypot1) and select the region for the instance (East US 2).
   - We then go back to Log Analytics Workspace to connect it to the virtual machine that we created earlier.
 4. Setup Microsoft Defender for Cloud:
   - Used to enable the ability to gather logs from the VM into the LAW.
   - We go into the settings for Defender Plans for the resource group and enable Microsoft Defender, We enable everything except SQL server on machines.
-  - Then we set the Data Collection setting to “All Events”. (Proceed to step 2f)
+  - Then we set the Data Collection setting to “All Events”.
 5. Setup Azure Sentinel:
   - This is our SIEM that is gonna ingest our logs.
   - We just have to connect it to our Log Analytic Workspace.
